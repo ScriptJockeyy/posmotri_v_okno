@@ -55,6 +55,28 @@ ol {
   flex-direction: row;
 }
 
+.result__video-container {
+  width: auto;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.content__video-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+}
+
+.content__video-card-description-container {
+  width: auto;
+  height: auto;
+}
+
 .content__details {
 }
 
