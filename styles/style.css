@@ -61,7 +61,7 @@ ol {
 .search-form {
   display: flex;
   align-items: flex-end;
-  gap: 40px;
+  /* gap: 40px; */
   justify-content: space-between;
   flex-direction: row;
   color: #fff;
@@ -92,6 +92,13 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  width: fit-content;
+  margin-right: 15px;
+  width: fit-content;
+}
+
+.search-form__label:last-child {
+  margin-right: 0;
 }
 
 input {
@@ -214,4 +221,16 @@ input:active {
 
 .more-button {
   width: 100%;
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  vertical-align: middle;
+}
+
+.search-form__label-text {
+  vertical-align: middle;
 }
