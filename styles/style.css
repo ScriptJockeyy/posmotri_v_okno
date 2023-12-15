@@ -61,7 +61,6 @@ ol {
 .search-form {
   display: flex;
   align-items: flex-end;
-  /* gap: 40px; */
   justify-content: space-between;
   flex-direction: row;
   color: #fff;
@@ -70,6 +69,7 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  appearance: none;
 }
 
 .search-form__fieldset {
@@ -77,7 +77,7 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed';
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -87,7 +87,7 @@ ol {
 
 .search-form__label {
   color: rgba(255, 255, 255, 0.7);
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed';
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -99,6 +99,26 @@ ol {
 
 .search-form__label:last-child {
   margin-right: 0;
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fff;
+  vertical-align: middle;
+}
+
+.search-form__label-text {
+  vertical-align: middle;
+}
+
+.search-form__label:hover {
+text-decoration: underline;
+}
+
+.search-form__label:focus {
+  border: 1px solid white;
 }
 
 input {
@@ -119,9 +139,16 @@ input:focus {
   outline-offset: 1px;
 }
 
-input:active {
-  /* Не срабатывает */
-  border: 1px solid red;
+input:active { 
+  border: 1px solid #fff;
+}
+
+input[type="checkbox"]:checked + span {
+ width: 19px;
+ height: 19px;
+ background-color: #fff;
+ outline: 1px solid black;
+ outline-offset: -2px;
 }
 
 .visually-hidden {
@@ -223,14 +250,8 @@ input:active {
   width: 100%;
 }
 
-.search-form__pseudo-checkbox {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #fff;
-  vertical-align: middle;
+button:active {
+  background: #545050;
 }
 
-.search-form__label-text {
-  vertical-align: middle;
-}
+
