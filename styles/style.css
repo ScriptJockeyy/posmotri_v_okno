@@ -43,7 +43,6 @@ ol {
 
 .content {
   display: grid;
-  /* margin: 133px 30px; */
   padding: 0 30px;
   grid-template-columns: 2fr 1fr;
   gap: 30px;
@@ -99,8 +98,7 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  width: fit-content;
-  margin-right: 15px;
+  margin-right: 13px;
 }
 
 .search-form__label:last-child {
@@ -142,6 +140,12 @@ input {
 }
 
 input:focus {
+  /* outline: 1px solid #fff;
+  outline-offset: 1px; */
+  outline: none;
+}
+
+input:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
@@ -194,6 +198,7 @@ input[type="checkbox"]:checked + span {
   width: 400px;
   height: 300px;
   overflow: scroll;
+  overflow-x: hidden; /* скрыт нижний скрол */
 }
 
 .content__list-item {
@@ -261,3 +266,33 @@ input[type="checkbox"]:checked + span {
 button:active {
   background: #545050;
 }
+
+.content__video-card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content__video-card-description-container {
+  overflow: hidden;
+}
+
+.search-form__submit-button:active, .content__video-card:active {
+  background-color: #545050;
+}
+
+.search-form__submit-button:hover, .content__video-card:hover {
+  text-decoration: underline;
+}
+
+.search-form__submit-button:focus {
+  outline: 1px solid white;
+  outline-offset: -3px;
+}
+
+.content__video-card:focus {
+  border: 1px solid white;
+}
+
+
+/* скачки контенте при активных псевдоэлементах */
+/* чекбоксы - отступ справа */
