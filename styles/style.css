@@ -143,8 +143,11 @@ button:active,
 }
 
 button:hover,
-.content__card-link:hover,
-.search-form__label-text:hover {
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
 
